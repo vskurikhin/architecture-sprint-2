@@ -1,10 +1,10 @@
 # Проектная работа 2
 ## ЗАДАНИЕ 1 Планирование
-### [«Первый вариант схемы»](./docs/task1-planning-step1.drawio.pdf)
-### [«Второй вариант схемы»](./docs/task1-planning-step2.drawio.pdf)
-### [«Третий вариант схемы»](./docs/task1-planning-step3.drawio.pdf)
-### [«Четвёртый вариант схемы»](./docs/task1-planning-step4.drawio.pdf)
-### [«Пятый вариант схемы»](./docs/task1-planning-step5.drawio.pdf)
+### [«Первый вариант схемы»](./task1-planning-step1.drawio.pdf)
+### [«Второй вариант схемы»](./task1-planning-step2.drawio.pdf)
+### [«Третий вариант схемы»](./task1-planning-step3.drawio.pdf)
+### [«Четвёртый вариант схемы»](./task1-planning-step4.drawio.pdf)
+### [«Пятый вариант схемы»](./task1-planning-step5.drawio.pdf)
 
 ## ЗАДАНИЕ 2 Шардирование
 В каталоге mongo-sharding сконфигурировано шардирование в docker-compose.yaml
@@ -91,39 +91,3 @@ pymongo-api  |   File "/usr/local/lib/python3.12/site-packages/motor/core.py", l
 pymongo-api  |     from pymongo.cursor import _QUERY_OPTIONS, Cursor, RawBatchCursor
 pymongo-api  | ImportError: cannot import name '_QUERY_OPTIONS' from 'pymongo.cursor' (/usr/local/lib/python3.12/site-packages/pymongo/cursor.py)
 ````
-
-# pymongo-api
-
-## Как запустить
-
-Запускаем mongodb и приложение
-
-```shell
-docker compose up -d
-```
-
-Заполняем mongodb данными
-
-```shell
-./scripts/mongo-init.sh
-```
-
-## Как проверить
-
-### Если вы запускаете проект на локальной машине
-
-Откройте в браузере http://localhost:8080
-
-### Если вы запускаете проект на предоставленной виртуальной машине
-
-Узнать белый ip виртуальной машины
-
-```shell
-curl --silent http://ifconfig.me
-```
-
-Откройте в браузере http://<ip виртуальной машины>:8080
-
-## Доступные эндпоинты
-
-Список доступных эндпоинтов, swagger http://<ip виртуальной машины>:8080/docs
